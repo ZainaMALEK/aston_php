@@ -1,5 +1,7 @@
 <?php
 
+
+
 if ( isset($_POST['categorie'])&& ($_POST['categorie'] != '') && isset($_POST['nom'])&& ($_POST['nom'] != '') && isset($_POST['image'])&& ($_POST['image'] != '') )
 {
   if(isset($_POST['prix']) && ($_POST['prix'] != ''))

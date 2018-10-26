@@ -31,20 +31,20 @@
           $prix = $menu['prix'];
 
         }
-      echo '<form action="update.php" method="post">';
+    //  echo '<form action="update.php" method="post">';
         echo '<label for="nom">Nom</label><br>';
-        echo '<input type="text" name="nom" value ="'.$nom.'"><br>';
+        echo '<input id="nom" type="text" name="nom" value ="'.$nom.'"><br>';
         echo '<label for="type">Catégorie</label><br>';
-        echo '<select  name="categorie"><br>';
+        echo '<select id="categorie"  name="categorie"><br>';
         echo '<option value="Entree" >Entrée</option><br>';
         echo '<option value="Plat" >Plat</option><br>';
         echo '<option value="Dessert" >Dessert</option><br>';
         echo '</select><br>';
         echo '<label for="nom">Prix</label><br>';
-        echo '<input type="text" name="prix" value ="'.$prix.'"><br>';
+        echo '<input id="prix" type="text" name="prix" value ="'.$prix.'"><br>';
         echo '<input type="hidden" name ="id" value ="'.$id.'">';?>
-        <button type="submit" class="btn btn-primary">Modifier</button>
-      </form>
+        <button class="updateBtn btn btn-primary">Modifier</button>
+
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
