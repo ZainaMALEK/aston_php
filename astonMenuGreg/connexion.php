@@ -1,5 +1,5 @@
 <?php
-  setlocale(LC_ALL, 'fr_FR');
+    setlocale(LC_ALL, 'fr_FR');
 	$hote = 'localhost';
 	$bdd = 'aston';
 	$util = 'root';
@@ -15,6 +15,4 @@
 		echo 'Connexion échouée :'.$e-> getMessage();
 		exit();
 	}
-
-  
 ?>

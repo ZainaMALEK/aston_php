@@ -3,10 +3,10 @@
 	$hote = 'localhost';
 	$bdd = 'aston';
 	$util = 'root';
-	$mdp = '';
+	$psw = '';
 	try
 	{
-		$pdo = new PDO('mysql:host='.$hote.';dbname='.$bdd,$util,$mdp);
+		$pdo = new PDO('mysql:host='.$hote.';dbname='.$bdd,$util,$psw);
 		// On définit le codage en utf8
 		$pdo->exec("set character set utf8");
 	}
