@@ -1,10 +1,13 @@
 <?php
 require('dbConnect.php');
 
-if (isset($_POST['email']) && $_POST['email'] !='' && isset($_POST['mdp']) && $_POST['mdp'] !='' ) 
-{
-    $email = $_POST['email'];
-    $mdp = $_POST['mdp'];
+    $email = $_POST['emailConnect'];
+    $mdp = $_POST['mdpConnect'];
+
+if (isset($_POST['emailConnect']) && $_POST['emailConnect'] !='' && isset($_POST['mdpConnect']) && $_POST['mdpConnect'] !='' ) 
+{   
+    $erreur='';
+    
     
 
 
@@ -13,15 +16,14 @@ if (isset($_POST['email']) && $_POST['email'] !='' && isset($_POST['mdp']) && $_
      $requete->execute();
      $resultat  = $requete->fetch();
 
-     if( password_verify($mdp,  $resultat['mdp']))
-    {
+     if( password_verify($mdp,  $resultat['mdp'])){
      $erreur =  'Connexion réussie';
      
-     if (session_id () == '')
+     /*if (session_id () == '')
      {
         session_start();
         $_SESSION['pseudo'] = $resultat['pseudo'];
-        header('Location: index.php');
+       // header('Location: index.php');*/
         
      }
      else
@@ -29,7 +31,7 @@ if (isset($_POST['email']) && $_POST['email'] !='' && isset($_POST['mdp']) && $_
          $erreur = 'Erreur d\'authentification';
          
      }
-    }
+    
 }
 echo $erreur;
    

@@ -1,9 +1,6 @@
 <?php
 require('dbConnect.php');
 
-
-
-if (isset($_POST['email']) && $_POST['email'] !='' && isset($_POST['mdp']) && $_POST['mdp'] !='' && isset($_POST['pseudo']) && $_POST['pseudo'] !='') {
     $erreur = '';
     $email = $_POST['email'];
     $mdp = $_POST['mdp'];
@@ -11,10 +8,11 @@ if (isset($_POST['email']) && $_POST['email'] !='' && isset($_POST['mdp']) && $_
     $mdp2 = $_POST['mdp2'];
     $age = $_POST['age'];
 
-    echo $mdp;
-    echo $mdp2;
+
+if (isset($email) && $email !='' && isset($mdp) && $mdp !='' && isset($pseudo) && $pseudo !='') {
+    echo "ok";
     
-   
+    
 
         if(filter_var($email, FILTER_VALIDATE_EMAIL) )
         {
@@ -28,7 +26,7 @@ if (isset($_POST['email']) && $_POST['email'] !='' && isset($_POST['mdp']) && $_
             $requete->bindParam(':age', $age);
             $requete->execute();
 
-            header('Location: index.php');
+            $erreur = 'Inscription réussie';
             }else{
             $erreur = 'Les deux mots de passe ne sont pas identiques';
             }

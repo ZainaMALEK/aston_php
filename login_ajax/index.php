@@ -16,34 +16,38 @@
             <!--Formulaire de connexion-->
             <button class="btn" id="connectBtn">Connexion</button>
             <button class="btn" id="registrBtn">Inscription</button>
+            <p id="displayError"></p>
             <section id="connexionSession"style="display:none">
-                <form action="connexion.php" method="POST">
+                <!--p id="displayErrorConnect"></p-->
+                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="emailConnect" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                        <input id="emailConnect" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                         
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" name="mdp">
+                        <input id="mdpConnect" type="password" class="form-control" placeholder="Password" name="mdp">
                     </div>
                     
                     
-                    <button type="submit" class="btn btn-primary">Valider</button>
-                </form>
+                    <button id="validConnexion" type="submit" class="btn btn-primary">Valider</button>
+                
             </section>    
 
         <!--Formulaire d'inscription-->
             
             <section id="inscriptionSession" style="display:block">
-                <form action="inscription.php" method="POST">
+
+                
+                
                     <div class="form-group">
                         <label for="pseudo">Pseudo</label>
                         <input type="text" class="form-control" id="pseudo" aria-describedby="emailHelp" placeholder="Entrez un pseudo" name="pseudo">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email </label>
-                        <input type="email" class="form-control" id="emailRegistr" aria-describedby="emailHelp" placeholder="Entrez un email" name="email">
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Entrez un email" name="email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Mot de passe</label>
@@ -55,11 +59,11 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Age</label>
-                        <input type="number" class="form-control" id="age" placeholder="Age" name="age">
+                        <input id="age" type="number" class="form-control" id="age" placeholder="Age" name="age">
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Valider</button>
-                </form-->
+                    <button id="validregistr" type="submit" class="btn btn-primary">Valider</button>
+                
             </section>
     </div>
     <!-- Optional JavaScript -->
