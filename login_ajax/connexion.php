@@ -17,13 +17,7 @@ if (isset($_POST['emailConnect']) && $_POST['emailConnect'] !='' && isset($_POST
      $resultat  = $requete->fetch();
 
      if( password_verify($mdp,  $resultat['mdp'])){
-     $erreur =  'Connexion réussie';
-     
-     /*if (session_id () == '')
-     {
-        session_start();
-        $_SESSION['pseudo'] = $resultat['pseudo'];
-       // header('Location: index.php');*/
+     $erreur =  'ok';
         
      }
      else
@@ -34,6 +28,11 @@ if (isset($_POST['emailConnect']) && $_POST['emailConnect'] !='' && isset($_POST
     
 }
 echo $erreur;
+/*if (session_id () == '')
+     {
+        session_start();
+        $_SESSION['pseudo'] = $resultat['pseudo'];
+       // header('Location: index.php');*/
    
 
     

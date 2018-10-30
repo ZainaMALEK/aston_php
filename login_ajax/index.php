@@ -12,64 +12,58 @@
   </head>
   <body>
     <div class="container">
-
+        <form id="connectForm">
             <!--Formulaire de connexion-->
             <button class="btn" id="connectBtn">Connexion</button>
             <button class="btn" id="registrBtn">Inscription</button>
             <p id="displayError"></p>
-            <section id="connexionSession"style="display:none">
-                <!--p id="displayErrorConnect"></p-->
-                
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input id="emailConnect" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email">
-                        
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input id="mdpConnect" type="password" class="form-control" placeholder="Password" name="mdp">
-                    </div>
+            <section id="connexionSession"style="display:none">    
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input id="emailConnect" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                     
-                    
-                    <button id="validConnexion" type="submit" class="btn btn-primary">Valider</button>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input id="mdpConnect" type="password" class="form-control" placeholder="Password" name="mdp">
+                </div>
                 
+                <button  type="submit" class="btn btn-primary">Valider</button>
             </section>    
+        </form>
 
         <!--Formulaire d'inscription-->
-            
+        <form id="inscForm">    
             <section id="inscriptionSession" style="display:block">
 
+                <div class="form-group">
+                    <label for="pseudo">Pseudo</label>
+                    <input type="text" class="form-control" id="pseudo" aria-describedby="emailHelp" placeholder="Entrez un pseudo" name="pseudo">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email </label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Entrez un email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Mot de passe</label>
+                    <input type="password" class="form-control" id="mdp" placeholder="Mot de passe" name="mdp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Confirmez votre mot de passe</label>
+                    <input type="password" class="form-control" id="mdp2" placeholder="Mot de passe" name="mdp2">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Age</label>
+                    <input id="age" type="number" class="form-control" id="age" placeholder="Age" name="age">
+                </div>
                 
-                
-                    <div class="form-group">
-                        <label for="pseudo">Pseudo</label>
-                        <input type="text" class="form-control" id="pseudo" aria-describedby="emailHelp" placeholder="Entrez un pseudo" name="pseudo">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email </label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Entrez un email" name="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Mot de passe</label>
-                        <input type="password" class="form-control" id="mdp" placeholder="Mot de passe" name="mdp">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Confirmez votre mot de passe</label>
-                        <input type="password" class="form-control" id="mdp2" placeholder="Mot de passe" name="mdp2">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Age</label>
-                        <input id="age" type="number" class="form-control" id="age" placeholder="Age" name="age">
-                    </div>
-                    
-                    <button id="validregistr" type="submit" class="btn btn-primary">Valider</button>
-                
+                <button id="validregistr" type="submit" class="btn btn-primary">Valider</button>
+            
             </section>
+        </form>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-   
 
 <!-- Modal -->
     

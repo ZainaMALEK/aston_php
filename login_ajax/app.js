@@ -6,7 +6,6 @@ $(document).ready(function(){
     const connexionSession = $('#connexionSession');
     const validregistr = $('#validregistr');
     const displayError = $('#displayError');
-    //const displayErrorConnect = $('#displayErrorConnect');
     const validConnexion = $('#validConnexion');
     
     //onglet inscription 
@@ -23,7 +22,7 @@ $(document).ready(function(){
         
     });
     //validation formulaire d'inscription
-    validregistr.on('click', function() {
+    /*validregistr.on('click', function() {
         displayError.text('');
         $.post('inscription.php',
         {
@@ -38,11 +37,58 @@ $(document).ready(function(){
 
         });
         
-    });
+    });*/
+
+    //validation inscription avec serialize()
+    $('#inscForm').submit(function(event){
+        event.preventDefault();
+        console.log($( this ).serialize());
+        $.ajax({
+            type: 'post',
+            url: 'inscription.php',
+            data: $( this ).serialize(),
+            timeout: 3000,
+            success: function(data){
+                console.log(data);
+                if(data == 'ok')
+                {
+                    displayError.html('Bien enregistre');
+                }
+            },
+            error: function(){
+                $displayError.html('Cette requête AJAX n\'a pas abouti');
+            }
+        });
+    }) 
+
+
+    //validation connexion avec serialize()
+    $('#connectForm').submit(function(event){
+        event.preventDefault();
+        console.log($( this ).serialize());
+        $.ajax({
+            type: 'post',
+            url: 'connexion.php',
+            data: $( this ).serialize(),
+            timeout: 3000,
+            success: function(data){
+                console.log(data);
+                if(data = 'ok')
+                {
+                    displayError.html('Connecté!');
+                }
+            },
+            error: function(){
+                $displayError.html('Cette requête AJAX n\'a pas abouti');
+            }
+        });
+    }) 
+
+
 
 
     //validation formulaire de connexion
-    validConnexion.on('click', function() {
+   /* validConnexion.on('click', function() {
         
         displayError.html('');
         $.post('connexion.php',
@@ -56,7 +102,7 @@ $(document).ready(function(){
 
         });
         
-    });
+    });*/
 
     //Validation du formulaire d\'inscription d\'une autre manière
     //on remets les balises form et on leur donne l'id #inscForm

@@ -10,7 +10,7 @@ require('dbConnect.php');
 
 
 if (isset($email) && $email !='' && isset($mdp) && $mdp !='' && isset($pseudo) && $pseudo !='') {
-    echo "ok";
+    
     
     
 
@@ -26,9 +26,12 @@ if (isset($email) && $email !='' && isset($mdp) && $mdp !='' && isset($pseudo) &
             $requete->bindParam(':age', $age);
             $requete->execute();
 
-            $erreur = 'Inscription réussie';
+            $erreur = 'ok';
+
             }else{
+
             $erreur = 'Les deux mots de passe ne sont pas identiques';
+            
             }
         }else{
         $erreur = 'Format email incorrect';
